@@ -1,0 +1,12 @@
+{
+  "total_trades": 1,
+  "winning_trades": 1,
+  "win_rate": 1.0,
+  "total_pnl": 1126.47225560839,
+  "avg_trade": 1126.47225560839,
+  "final_capital": 51126.47225560839,
+  "return_pct": 2.252944511216774,
+  "sharpe_ratio": 2.947822106643105,
+  "max_drawdown": 0.0,
+  "hedge_ratio": 0.9809465591633145
+}

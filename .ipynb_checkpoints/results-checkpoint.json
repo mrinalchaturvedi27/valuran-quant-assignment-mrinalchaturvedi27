@@ -1,0 +1,21 @@
+{
+  "portfolio_pnl": {
+    "sandbox_pnl": 0.0,
+    "backtest_pnl": 1577.232482833749,
+    "pnl_match": "PENDING"
+  },
+  "alphas": {
+    "alpha_1_pairs": {
+      "trades": 2,
+      "pnl": 1577.232482833749,
+      "match": "PENDING",
+      "analysis": "Backtest completed. Awaiting sandbox deployment for replication test."
+    }
+  },
+  "metrics": {
+    "win_rate": 1.0,
+    "sharpe_ratio": 3.612245453267899,
+    "max_drawdown": 0.0,
+    "return_pct": 3.154464965667488
+  }
+}

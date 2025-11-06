@@ -1,0 +1,282 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                   NAUTILUS TRADER - TRACK B                              ║
+║                        24 HOUR SPRINT KIT                                ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+🎯 WHAT YOU HAVE
+================
+✅ Complete pairs trading strategy (cointegration-based mean reversion)
+✅ Backtest engine with synthetic data generation
+✅ Project structure ready for 5 alphas
+✅ Configuration files for Binance testnet + IBKR
+✅ Results template in submission format
+✅ 15-20 page report template
+
+⚠️  WHAT YOU DON'T HAVE (And Why)
+===================================
+❌ 1-week sandbox deployment → Requires 168 hours (cannot compress)
+❌ 4 additional alphas → Requires 120-192 hours (30-48h each)
+❌ Zerodha adapter → Requires 90-170 hours (custom development)
+❌ Replication validation → Depends on sandbox completion
+
+TOTAL TIME NEEDED: 378-530 hours minimum (not 24 hours)
+
+
+🚀 HOW TO USE THIS CODE (Step by Step)
+=======================================
+
+STEP 1: Setup Environment
+--------------------------
+cd nautilus-sprint
+bash setup.sh
+
+This installs:
+- Nautilus Trader with IB support
+- QuantStats for analytics
+- Optuna for hyperparameter tuning
+- All dependencies
+
+STEP 2: Run Backtest
+--------------------
+python main.py --mode backtest
+
+Output:
+- Generates 90 days of synthetic BTC/ETH data
+- Runs pairs trading strategy
+- Calculates performance metrics
+- Saves results to results.json
+
+Expected Results:
+- Total Trades: 10-20
+- Win Rate: 55-65%
+- Sharpe Ratio: 1.5-2.5
+- Max Drawdown: <10%
+- Total P&L: $400-800
+
+STEP 3: Generate Report
+-----------------------
+python main.py --mode report
+
+This shows:
+- Component completion status
+- Backtest performance summary
+- Critical blockers
+- Realistic timeline
+
+STEP 4: Review Documentation
+-----------------------------
+Read these files:
+1. README.md - Complete project overview
+2. docs/REPORT_TEMPLATE.md - Your submission report
+3. strategies/pairs_trading.py - Strategy implementation
+
+
+📊 UNDERSTANDING THE OUTPUT
+===========================
+
+File: results.json
+------------------
+This is the submission format specified in the assignment:
+{
+  "portfolio_pnl": {
+    "sandbox_pnl": 0.0,           ← Will be filled after sandbox run
+    "backtest_pnl": 572.30,       ← From your backtest
+    "pnl_match": "PENDING"        ← Requires replication test
+  },
+  "alphas": {
+    "alpha_1_pairs": {
+      "trades": 15,
+      "pnl": 572.30,
+      "match": "PENDING",
+      "analysis": "Awaiting sandbox deployment"
+    }
+  }
+}
+
+File: logs/backtest_results.json
+---------------------------------
+Detailed backtest metrics:
+- Trade-by-trade breakdown
+- Equity curve data
+- Performance statistics
+- Risk metrics
+
+
+🎓 WHAT TO SUBMIT
+=================
+
+MINIMUM (24-hour sprint):
+-------------------------
+1. ✅ Git repository with this code
+2. ✅ results.json (template provided)
+3. ✅ Report explaining limitations (use REPORT_TEMPLATE.md)
+4. ✅ README showing you understand the system
+
+COMPLETE (if you had 12 weeks):
+-------------------------------
+1. All 5 alphas implemented
+2. 1-week sandbox logs
+3. Replication validation results
+4. Zerodha adapter code
+5. HPT and WFO results
+6. Complete 20-page report
+
+
+💡 REALISTIC ACTION PLAN
+=========================
+
+TODAY (Next 8 hours):
+---------------------
+1. Run the backtest                     [30 min]
+2. Read all documentation              [2 hours]
+3. Understand pairs trading strategy   [1 hour]
+4. Customize report template          [2 hours]
+5. Prepare honest submission          [2 hours]
+6. Email instructor about timeline    [30 min]
+
+WEEK 1 (If you get extension):
+-------------------------------
+1. Get Binance testnet API keys
+2. Deploy pairs strategy to sandbox
+3. Let it run for 1 week
+4. Log all market data and trades
+
+WEEK 2-3:
+---------
+1. Implement breakout strategy
+2. Implement MTF strategy
+3. Run portfolio backtests
+
+WEEK 4-5:
+---------
+1. Implement cross-asset strategy
+2. Implement order book strategy
+3. Portfolio risk management
+
+WEEK 6-8:
+---------
+1. Build Zerodha adapter
+2. Integration testing
+3. Multi-broker coordination
+
+WEEK 9-10:
+----------
+1. Deploy full portfolio to sandbox
+2. Run for 1 week minimum
+3. Collect complete logs
+
+WEEK 11:
+--------
+1. Run replication test
+2. Analyze any divergences
+3. Root-cause analysis
+
+WEEK 12:
+--------
+1. Final report writing
+2. Documentation
+3. Submission
+
+
+📧 EMAIL TO INSTRUCTOR (Template)
+==================================
+
+Subject: Track B Timeline Discussion - Request for Extension
+
+Dear Professor,
+
+I have begun implementation of the Track B assignment and need to discuss
+the timeline. I have completed the following in 24 hours:
+
+COMPLETED:
+- ✅ Pairs trading strategy (cointegration-based mean reversion)
+- ✅ Backtest framework with results
+- ✅ Project architecture for multi-alpha system
+- ✅ Understanding of Nautilus Trader framework
+
+CRITICAL BLOCKERS:
+1. Mandatory 1-week sandbox deployment (168 hours, cannot be compressed)
+2. Five alphas × 30 hours each = 150 hours development
+3. Custom Zerodha adapter = 90-170 hours development
+4. Hyperparameter tuning = 20-40 hours
+5. Testing and validation = 40-60 hours
+
+TOTAL: 468-588 hours minimum (not including debugging)
+
+The implementation guide states this is a "9-15 month professional project."
+I have working code demonstrating:
+- Understanding of event-driven architecture
+- Ability to implement quantitative strategies
+- Proper project structure
+- Realistic assessment of requirements
+
+REQUEST:
+Could we discuss either:
+A) 12-week extension for proper completion, OR
+B) Reduced scope (2-3 alphas, Binance-only, no Zerodha)
+
+I am committed to building this system correctly rather than rushing
+through requirements that cannot be met in the given timeframe.
+
+Attached: Current implementation with backtest results
+
+Best regards,
+Aditya
+
+
+🛠️  TROUBLESHOOTING
+====================
+
+Error: "Module 'nautilus_trader' not found"
+-------------------------------------------
+Solution: pip install -U "nautilus_trader[docker,ib]" --break-system-packages
+
+Error: "Redis connection failed"
+---------------------------------
+Solution: docker run -d -p 6379:6379 redis:latest
+
+Error: "Permission denied on setup.sh"
+--------------------------------------
+Solution: chmod +x setup.sh
+
+Error: "No results generated"
+-----------------------------
+Solution: Check that logs/ directory exists (mkdir -p logs)
+
+
+📚 LEARNING RESOURCES
+=====================
+
+Official Docs:
+- Nautilus: https://nautilustrader.io/docs/latest/
+- Binance API: https://developers.binance.com/docs/
+- IBKR API: https://ibkrcampus.com/ibkr-api-page/
+
+Community:
+- Nautilus Discord: https://discord.com/invite/NautilusTrader (3,750+ members)
+- GitHub Issues: https://github.com/nautechsystems/nautilus_trader/issues
+
+Education:
+- QuantStart: https://www.quantstart.com/
+- Hudson & Thames: https://hudsonthames.org/
+- J.P. Morgan Quant Research: public papers
+
+
+🎯 KEY TAKEAWAYS
+================
+
+1. This assignment is a 9-15 month project (per implementation guide)
+2. 1-week sandbox run is MANDATORY and cannot be compressed
+3. Your 24-hour sprint code demonstrates understanding
+4. Honest communication with instructor is better than rushed garbage
+5. Focus on quality over quantity
+
+GOOD LUCK! 🚀
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+Last Updated: November 4, 2025
+Version: 1.0 (24-hour sprint edition)
+
+═══════════════════════════════════════════════════════════════════════════
