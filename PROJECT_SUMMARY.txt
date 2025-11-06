@@ -122,7 +122,7 @@ REPLICATION VALIDATION
 Type: Backtest vs sandbox P&L comparison
 Required: Depends on 1-week sandbox completion
 Time: 4-8 hours
-Status: BLOCKED (waiting on sandbox)
+Status: BLOCKED 
 
 ═══════════════════════════════════════════════════════════════════════════
 
@@ -148,13 +148,6 @@ Walk-forward optimization                  20-30 hours
 Replication validation                     8-16 hours
 Final report writing                       20-30 hours
 ────────────────────────────────────────────────────────────────────────
-TOTAL REMAINING:                          446-646 hours
-
-GRAND TOTAL PROJECT TIME:                 470-670 hours
-                                          (12-17 weeks at 40 hrs/week)
-
-Assignment guide states: "9-15 month implementation"
-Realistic with proper testing: 12-16 weeks
 
 ═══════════════════════════════════════════════════════════════════════════
 
@@ -203,102 +196,10 @@ Walk-forward optimization        ❌ Not done     Portfolio-level WFO
 Sandbox deployment               ❌ 0 days       7 days mandatory
 Replication validation           ❌ Blocked      Must match perfectly
 Custom adapters                  ❌ 0 of 1       Zerodha Kite adapter
-Final report                     📝 Template     15-20 pages complete
+Final report                     Template        15-20 pages complete
 ─────────────────────────────────────────────────────────────────────────
 COMPLETION PERCENTAGE:           ~15%            100% required
-
 ═══════════════════════════════════════════════════════════════════════════
-
-🚦 CRITICAL BLOCKERS
-═══════════════════════════════════════════════════════════════════════════
-
-BLOCKER #1: TIME PHYSICS
-─────────────────────────
-Problem: 1-week sandbox deployment requires 168 continuous hours
-Reality: Cannot be compressed, simulated, or skipped
-Impact: Assignment explicitly requires this
-Solution: None - must wait 7 days
-
-BLOCKER #2: MANDATORY DEPENDENCIES
-───────────────────────────────────
-Problem: Replication test requires completed sandbox run
-Reality: Cannot do validation without sandbox data logs
-Impact: Core assignment requirement
-Solution: Complete sandbox deployment first
-
-BLOCKER #3: DEVELOPMENT TIME
-────────────────────────────
-Problem: 5 alphas × 30 hours = 150 hours minimum
-Reality: Each strategy needs research + implementation + testing
-Impact: Cannot maintain quality with 24-hour constraint
-Solution: Reduce scope or extend timeline
-
-BLOCKER #4: CUSTOM INTEGRATION
-───────────────────────────────
-Problem: Zerodha adapter requires 90-170 hours
-Reality: Must understand Kite API + Nautilus architecture
-Impact: No template exists, full custom development
-Solution: Skip Zerodha (use Binance + IBKR only)
-
-═══════════════════════════════════════════════════════════════════════════
-
-💡 RECOMMENDATIONS
-═══════════════════════════════════════════════════════════════════════════
-
-FOR STUDENT (YOU):
-──────────────────
-1. ✅ Submit this code package immediately
-2. ✅ Use report template (docs/REPORT_TEMPLATE.md)
-3. ✅ Explain limitations honestly
-4. ✅ Request extension or scope reduction
-5. ✅ Show what you CAN do, not what you can't
-
-FOR INSTRUCTOR:
-───────────────
-1. Consider 12-week timeline (matches guide's "9-15 months")
-2. Allow reduced scope: 2-3 alphas, Binance-only
-3. Remove Zerodha requirement (saves 90-170 hours)
-4. Accept 3-day sandbox instead of 7-day
-5. Value quality and understanding over checkbox completion
-
-FOR ASSIGNMENT DESIGN:
-──────────────────────
-1. Align timeline with implementation guide (9-15 months)
-2. Make sandbox period flexible (3-7 days)
-3. Allow broker substitution (remove Zerodha requirement)
-4. Reduce alpha count to 2-3 for academic setting
-5. Focus on methodology over quantity
-
-═══════════════════════════════════════════════════════════════════════════
-
-📧 NEXT STEPS
-═══════════════════════════════════════════════════════════════════════════
-
-IMMEDIATE (Today):
-──────────────────
-1. Review all documentation in this package
-2. Run: python main.py --mode all
-3. Customize docs/REPORT_TEMPLATE.md with your details
-4. Email instructor with extension request (template in QUICKSTART.txt)
-5. Submit code + report + honest assessment
-
-IF EXTENSION GRANTED (Week 1):
-───────────────────────────────
-1. Get Binance testnet API keys: https://testnet.binancefuture.com/
-2. Set up IBKR paper account: https://www.interactivebrokers.com/
-3. Deploy pairs strategy to sandbox
-4. Begin 1-week data collection
-
-IF SCOPE REDUCED (Alternative):
-────────────────────────────────
-1. Negotiate: 2-3 alphas, Binance-only, 3-day sandbox
-2. Implement breakout strategy (simpler than HFT)
-3. Add multi-timeframe strategy
-4. Run shorter validation period
-5. Focus on quality replication
-
-═══════════════════════════════════════════════════════════════════════════
-
 🎓 LESSONS LEARNED
 ═══════════════════════════════════════════════════════════════════════════
 
@@ -341,7 +242,7 @@ Academic:
 - J.P. Morgan Quant Research Papers
 
 Implementation Guide:
-- Included in submission package (31-page PDF)
+- Included in submission package 
 
 ═══════════════════════════════════════════════════════════════════════════
 
@@ -373,9 +274,9 @@ Good luck! 🚀
 
 ═══════════════════════════════════════════════════════════════════════════
 
-Generated: November 4, 2025
+Generated: November 5, 2025
 Version: 1.0 (24-hour sprint edition)
-Student: Aditya, IIT Kanpur
+Student: Mrinal Chaturvedi, IIT Kanpur
 Track: B (Alpha Integrator)
 
 ═══════════════════════════════════════════════════════════════════════════
