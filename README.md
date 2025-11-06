@@ -21,7 +21,7 @@
 - Zerodha custom adapter (80-160 hours)
 - Replication validation (depends on sandbox)
 
-**Total estimated time needed: 356-524 hours (not 24)**
+**Total estimated time needed: 356-524 hours **
 
 ---
 
