@@ -205,7 +205,7 @@ Max Drawdown:      -8.30%
 ### Official Documentation
 - [Nautilus Trader Docs](https://nautilustrader.io/docs/latest/)
 - [Nautilus GitHub](https://github.com/nautechsystems/nautilus_trader)
-- [Nautilus Discord](https://discord.com/invite/NautilusTrader) - 3,750+ members
+- [Nautilus Discord](https://discord.com/invite/NautilusTrader)
 
 ### Broker Documentation
 - [Binance API](https://developers.binance.com/docs/)
